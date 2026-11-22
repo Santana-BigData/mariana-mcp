@@ -6,7 +6,7 @@ Consulte o banco de dados em grafo **[Mariana](https://mariana.santanabigdata.co
 
 - **Servidor remoto, nada para rodar na sua máquina:** `https://mariana.santanabigdata.com.br/mcp` (MCP via HTTP).
 - **Só leitura.** Nenhuma ferramenta escreve no banco.
-- **Conta gratuita:** consulta o grafo público (`global`), com cota diária de consultas e teto de linhas por consulta. Dados pessoais (CPF, CNPJ, nomes, contatos, endereços, valores, datas) vêm **mascarados**: você pode buscar por um CPF ou CNPJ exato, mas o resultado sai sempre mascarado. Os dados completos ficam nos planos pagos.
+- **Conta gratuita:** consulta o grafo público (`global`), com cota diária de consultas e teto de linhas por consulta. Dados pessoais (CPF, CNPJ, nomes, contatos, endereços, valores, datas) vêm **mascarados**: você pode buscar por um CPF ou CNPJ exato, mas o resultado sai sempre mascarado. Os dados completos vêm com o plano **Premium** (R$ 299,90/mês: 10.000 consultas por mês, até 5.000 linhas por consulta, sem máscara) — assine na página **Premium** do site do Mariana.
 
 ## 1. Pegue um token
 

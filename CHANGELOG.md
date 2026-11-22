@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 
+## [0.1.2] - 2026-11-22
+
+### Changed
+
+- Documented the Premium plan (R$ 299,90/month: 10,000 queries per month, up to 5,000 rows per query, complete data with no masking).
+- Skill: `whoami` now reports the plan (`tier`) and the quota period (day on free, month on Premium).
+
 ## [0.1.1] - 2026-11-22
 
 ### Changed

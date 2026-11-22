@@ -6,7 +6,7 @@ Query the **[Mariana](https://mariana.santanabigdata.com.br)** graph database fr
 
 - **Remote server, nothing to run locally:** `https://mariana.santanabigdata.com.br/mcp` (MCP streamable HTTP).
 - **Read-only.** No tool writes to the database.
-- **Free accounts:** query the public graph (`global`) with a daily query quota and a row limit per query. Personal data (CPF, CNPJ, names, contacts, addresses, amounts, dates) comes **masked** — you can search for an exact CPF or CNPJ, but the result is always masked. Full data is available on paid plans.
+- **Free accounts:** query the public graph (`global`) with a daily query quota and a row limit per query. Personal data (CPF, CNPJ, names, contacts, addresses, amounts, dates) comes **masked** — you can search for an exact CPF or CNPJ, but the result is always masked. Full data comes with the **Premium** plan (R$ 299,90/month: 10,000 queries per month, up to 5,000 rows per query, no masking) — subscribe on the **Premium** page of the Mariana site.
 
 ## 1. Get a token
 

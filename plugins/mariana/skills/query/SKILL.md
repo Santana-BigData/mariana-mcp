@@ -9,7 +9,7 @@ Mariana is a graph database: nodes have labels and properties, and typed relatio
 
 ## Workflow
 
-1. **Know where you are.** Call `whoami` once: it tells the account role and, for regular accounts, today's quota (`used_today` of `daily_queries`) and the row ceiling (`max_rows`). Call `list_graphs` to see which graphs you can query (regular accounts see only `global`).
+1. **Know where you are.** Call `whoami` once: it tells the account role and, for regular accounts, the plan (`quota.tier`: `free` or `premium`), the quota (`used` of `limit` per `period`: day on free, month on Premium) and the row ceiling (`max_rows`). Call `list_graphs` to see which graphs you can query (regular accounts see only `global`).
 2. **Read the schema before writing Cypher.** `get_schema(graph)` lists labels with their properties (type, `required`, `unique`, `searchable`) and relationship types with the allowed `from → to` label pairs. Use only names that exist there; labels and relationship types are case-sensitive.
 3. **Write a narrow query.** Start from something selective, in this order of preference:
    - a `unique` property with an exact value: `MATCH (p:Pessoa {cpf: $cpf})`
@@ -48,6 +48,6 @@ RETURN p.nome, p.cpf, score(p) ORDER BY score(p) DESC LIMIT 10
 ## Limits and errors
 
 - Regular accounts: each `query` and `neighbors` call uses 1 of the daily quota (resets at midnight, Brasília time); `explain`, `get_schema` and `get_node` are free. Results are cut at the account's row ceiling; `truncated: true` means there may be more rows. Prefer aggregates (`count`) and tighter filters over paging through rows, and tell the user when a result was truncated.
-- Free accounts see personal data **masked** (CPF like `***.456.789-**`, names as first name + initials, contacts, addresses, amounts and dates masked). Searching by an exact CPF/CNPJ works (`{cpf: $cpf}` or `WHERE p.cpf = $cpf`); prefix, substring, range or ORDER BY on identifiers is rejected. Never try to unmask or infer hidden values; tell the user the data is masked on the free plan.
+- Free accounts see personal data **masked** (CPF like `***.456.789-**`, names as first name + initials, contacts, addresses, amounts and dates masked). Searching by an exact CPF/CNPJ works (`{cpf: $cpf}` or `WHERE p.cpf = $cpf`); prefix, substring, range or ORDER BY on identifiers is rejected. Never try to unmask or infer hidden values; tell the user the data is masked on the free plan and that the Premium plan (Premium page on the Mariana site) shows it complete. Premium accounts (`whoami` → `quota.tier: "premium"`) get complete data, a monthly quota (`period: "month"`) and a higher row limit.
 - Tool errors come back with the server's message (in Portuguese). Read it, fix the query (unknown label, missing `LIMIT`, needs `allow_scan`, quota reached, graph not allowed) and retry once; don't loop.
 - Do not invent data: if a query returns nothing, say so and suggest a broader search.
