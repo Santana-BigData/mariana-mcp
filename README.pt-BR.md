@@ -14,7 +14,27 @@ Consulte o banco de dados em grafo **[Mariana](https://mariana.santanabigdata.co
 2. Abra **Tokens de API** no menu do usuário ([link direto](https://mariana.santanabigdata.com.br/tokens?lang=pt)) e crie um token, por exemplo "Claude Code no notebook".
 3. Copie (`mrnk_…`). Ele aparece uma vez só e vale até ser revogado. Trate como senha.
 
-## 2. Instale no Claude Code (plugin, recomendado)
+## 2. Instale na extensão do Claude Code no VS Code
+
+1. Abra o painel do Claude Code no VS Code (o ícone de faísca, ou **Claude Code: Open** na paleta de comandos).
+2. Digite **`/plugins`** na caixa de mensagem e aperte Enter. Abre a janela **Manage plugins**.
+3. Aba **Marketplaces**: digite `Santana-BigData/mariana-mcp` e adicione.
+4. Aba **Plugins**: procure **mariana**, clique em **Install** e escolha **Install for you**.
+5. Aparece um formulário com as configurações do plugin: cole o seu **token de API do Mariana** (`mrnk_…`). Ele fica no armazenamento seguro do sistema. Pulou? Abra a linha do plugin e clique na engrenagem (ou em **Configure**).
+6. Comece uma conversa nova e digite **`/mcp`**: `plugin:mariana:mariana` tem que aparecer **Connected** (**Failed** quer dizer token errado ou revogado). Se a janela pedir **Restart Claude to apply plugin changes**, reinicie.
+
+> No painel do VS Code, digitar `/plugin marketplace add …` ou `/plugin install …` na caixa de mensagem **não funciona** ("isn't available in this environment"). Use a janela `/plugins` acima, ou os comandos de terminal abaixo.
+
+Prefere o terminal? No terminal integrado do VS Code (precisa do `claude` instalado; a extensão não o coloca no PATH):
+
+```bash
+claude plugin marketplace add Santana-BigData/mariana-mcp
+claude plugin install mariana@mariana-mcp
+```
+
+A extensão e o terminal usam as mesmas configurações: o plugin instalado num aparece no outro. Depois, abra `/plugins` → **Plugins** → mariana → engrenagem para colocar o token, e comece uma conversa nova.
+
+## 2b. Instale no Claude Code do terminal (CLI)
 
 Dentro do Claude Code:
 

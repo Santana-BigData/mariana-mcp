@@ -14,7 +14,27 @@ Query the **[Mariana](https://mariana.santanabigdata.com.br)** graph database fr
 2. Open **API tokens** in the user menu ([direct link](https://mariana.santanabigdata.com.br/tokens)) and create a token, e.g. "Claude Code on my laptop".
 3. Copy it (`mrnk_…`). It is shown only once and is valid until you revoke it. Treat it like a password.
 
-## 2. Install in Claude Code (plugin, recommended)
+## 2. Install in the Claude Code extension for VS Code
+
+1. Open the Claude Code panel in VS Code (the spark icon, or **Claude Code: Open** in the command palette).
+2. Type **`/plugins`** in the prompt box and press Enter. The **Manage plugins** window opens.
+3. **Marketplaces** tab: type `Santana-BigData/mariana-mcp` and add it.
+4. **Plugins** tab: search for **mariana**, click **Install** and choose **Install for you**.
+5. A form asks for the plugin settings: paste your **Mariana API token** (`mrnk_…`). It is stored in your system's secure storage. Skipped it? Open the plugin's row and click the gear icon (or **Configure**).
+6. Start a new conversation and type **`/mcp`**: `plugin:mariana:mariana` must show **Connected** (**Failed** means a wrong or revoked token). If the window says **Restart Claude to apply plugin changes**, do it.
+
+> In the VS Code panel, typing `/plugin marketplace add …` or `/plugin install …` in the prompt box does **not** work ("isn't available in this environment"). Use the `/plugins` window above, or the terminal commands below.
+
+Prefer the terminal? In VS Code's integrated terminal (needs the `claude` CLI installed; the extension doesn't add it to the PATH):
+
+```bash
+claude plugin marketplace add Santana-BigData/mariana-mcp
+claude plugin install mariana@mariana-mcp
+```
+
+The extension and the CLI share the same settings, so a plugin installed in one shows up in the other. Then open `/plugins` → **Plugins** → mariana → gear icon to set the token, and start a new conversation.
+
+## 2b. Install in Claude Code in the terminal (CLI)
 
 Inside Claude Code:
 

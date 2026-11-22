@@ -6,6 +6,7 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ### Changed
 
+- README: step-by-step for the Claude Code extension in VS Code (`/plugins` window; typed `/plugin …` commands don't work in the panel).
 - Documented the free plan: personal data is masked in every result; exact CPF/CNPJ search still works.
 - `explain` now validates without running; the detailed plan is for admin accounts.
 
