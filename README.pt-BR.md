@@ -19,11 +19,11 @@ Consulte o banco de dados em grafo **[Mariana](https://mariana.santanabigdata.co
 Dentro do Claude Code:
 
 ```text
-/plugin marketplace add <este repositório>
+/plugin marketplace add Santana-BigData/mariana-mcp
 /plugin install mariana@mariana-mcp
 ```
 
-`<este repositório>` é a URL git deste repositório (ou `dono/repo` no GitHub). Precisa de um Claude Code recente (o pedido do token usa as configurações de usuário do plugin): rode `claude update` se o `/plugin install` reclamar de `userConfig`. O Claude Code pede o **token de API do Mariana** ao ativar o plugin e guarda em armazenamento seguro. Depois, `/mcp` deve mostrar `plugin:mariana:mariana` **conectado**.
+(ou a URL completa: `https://github.com/Santana-BigData/mariana-mcp.git`). Precisa de um Claude Code recente (o pedido do token usa as configurações de usuário do plugin): rode `claude update` se o `/plugin install` reclamar de `userConfig`. O Claude Code pede o **token de API do Mariana** ao ativar o plugin e guarda em armazenamento seguro. Depois, `/mcp` deve mostrar `plugin:mariana:mariana` **conectado**.
 
 O plugin traz:
 

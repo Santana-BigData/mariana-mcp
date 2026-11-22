@@ -18,5 +18,9 @@
         }
       ]
     }
-  ]
+  ],
+  "repository": {
+    "url": "https://github.com/Santana-BigData/mariana-mcp",
+    "source": "github"
+  }
 }

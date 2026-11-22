@@ -7,8 +7,15 @@
     "url": "https://mariana.santanabigdata.com.br"
   },
   "homepage": "https://mariana.santanabigdata.com.br",
+  "repository": "https://github.com/Santana-BigData/mariana-mcp",
   "license": "MIT",
-  "keywords": ["mcp", "graph", "database", "cypher", "mariana"],
+  "keywords": [
+    "mcp",
+    "graph",
+    "database",
+    "cypher",
+    "mariana"
+  ],
   "userConfig": {
     "mariana_token": {
       "type": "string",
