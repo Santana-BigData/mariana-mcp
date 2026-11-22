@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] - 2026-11-22
+
+### Changed
+
+- Documented the free plan: personal data is masked in every result; exact CPF/CNPJ search still works.
+- `explain` now validates without running; the detailed plan is for admin accounts.
+
 ## [0.1.0] - 2026-11-22
 
 ### Added

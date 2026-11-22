@@ -6,7 +6,7 @@ Query the **[Mariana](https://mariana.santanabigdata.com.br)** graph database fr
 
 - **Remote server, nothing to run locally:** `https://mariana.santanabigdata.com.br/mcp` (MCP streamable HTTP).
 - **Read-only.** No tool writes to the database.
-- **Your account, your limits.** Regular accounts query the public graph (`global`) with a daily query quota and a row limit per query.
+- **Free accounts:** query the public graph (`global`) with a daily query quota and a row limit per query. Personal data (CPF, CNPJ, names, contacts, addresses, amounts, dates) comes **masked** — you can search for an exact CPF or CNPJ, but the result is always masked. Full data is available on paid plans.
 
 ## 1. Get a token
 
@@ -60,7 +60,7 @@ claude mcp add --transport http --scope user mariana \
 | `list_graphs` | Graphs your account can query | no |
 | `get_schema` | Labels, properties (type, required, unique, searchable) and relationship types with their label pairs | no |
 | `query` | Runs read-only Cypher; returns columns, rows, cost, `truncated` and your `quota` | yes |
-| `explain` | Plan and estimated cost, without running | no |
+| `explain` | Checks the query without running (admins also get the plan) | no |
 | `get_node` | A node's labels and properties by ID | no |
 | `neighbors` | A node, its neighbors and the edges between them | yes |
 | `whoami` | Your email, role and today's quota | no |

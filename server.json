@@ -3,7 +3,7 @@
   "name": "br.com.santanabigdata/mariana",
   "title": "Mariana",
   "description": "Read-only access to the Mariana graph database: schema, Cypher queries and neighbors.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://mariana.santanabigdata.com.br",
   "remotes": [
     {

@@ -6,7 +6,7 @@ Consulte o banco de dados em grafo **[Mariana](https://mariana.santanabigdata.co
 
 - **Servidor remoto, nada para rodar na sua máquina:** `https://mariana.santanabigdata.com.br/mcp` (MCP via HTTP).
 - **Só leitura.** Nenhuma ferramenta escreve no banco.
-- **Sua conta, seus limites.** Contas comuns consultam o grafo público (`global`), com cota diária de consultas e teto de linhas por consulta.
+- **Conta gratuita:** consulta o grafo público (`global`), com cota diária de consultas e teto de linhas por consulta. Dados pessoais (CPF, CNPJ, nomes, contatos, endereços, valores, datas) vêm **mascarados**: você pode buscar por um CPF ou CNPJ exato, mas o resultado sai sempre mascarado. Os dados completos ficam nos planos pagos.
 
 ## 1. Pegue um token
 
@@ -60,7 +60,7 @@ claude mcp add --transport http --scope user mariana \
 | `list_graphs` | Grafos que a conta pode consultar | não |
 | `get_schema` | Labels, propriedades (tipo, obrigatória, única, pesquisável) e relações com os pares de labels | não |
 | `query` | Executa Cypher somente leitura; devolve colunas, linhas, custo, `truncated` e a `quota` | sim |
-| `explain` | Plano e custo estimado, sem executar | não |
+| `explain` | Confere a consulta sem executar (admins recebem também o plano) | não |
 | `get_node` | Labels e propriedades de um nó pelo ID | não |
 | `neighbors` | Um nó, os vizinhos e as arestas entre eles | sim |
 | `whoami` | E-mail, papel e cota do dia | não |
