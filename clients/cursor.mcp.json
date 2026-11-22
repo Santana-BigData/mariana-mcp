@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mariana": {
+      "url": "https://mariana.santanabigdata.com.br/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:MARIANA_TOKEN}"
+      }
+    }
+  }
+}

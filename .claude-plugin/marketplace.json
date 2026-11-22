@@ -1,0 +1,19 @@
+{
+  "name": "mariana-mcp",
+  "owner": {
+    "name": "Santana Big Data",
+    "url": "https://mariana.santanabigdata.com.br"
+  },
+  "metadata": {
+    "description": "Mariana graph database for Claude Code: MCP server and query skill."
+  },
+  "plugins": [
+    {
+      "name": "mariana",
+      "source": "./plugins/mariana",
+      "description": "Query the Mariana graph database from Claude Code (read-only MCP server + Cypher skill).",
+      "category": "database",
+      "tags": ["mcp", "graph", "database", "cypher"]
+    }
+  ]
+}

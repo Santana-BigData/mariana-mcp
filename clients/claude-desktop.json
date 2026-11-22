@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "mariana": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mariana.santanabigdata.com.br/mcp",
+        "--transport",
+        "http-only",
+        "--header",
+        "Authorization:${AUTH_HEADER}"
+      ],
+      "env": {
+        "AUTH_HEADER": "Bearer mrnk_PUT_YOUR_TOKEN_HERE"
+      }
+    }
+  }
+}

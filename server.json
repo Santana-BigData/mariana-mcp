@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "br.com.santanabigdata/mariana",
+  "title": "Mariana",
+  "description": "Read-only access to the Mariana graph database: schema, Cypher queries and neighbors.",
+  "version": "0.1.0",
+  "websiteUrl": "https://mariana.santanabigdata.com.br",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mariana.santanabigdata.com.br/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "\"Bearer <token>\" with a Mariana API token (mrnk_...) from https://mariana.santanabigdata.com.br/tokens",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

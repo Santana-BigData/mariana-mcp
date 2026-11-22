@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "mariana": {
+      "type": "http",
+      "url": "https://mariana.santanabigdata.com.br/mcp",
+      "headers": {
+        "Authorization": "Bearer ${MARIANA_TOKEN}"
+      }
+    }
+  }
+}

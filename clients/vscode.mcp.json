@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "mariana-token",
+      "description": "Mariana API token (mrnk_...)",
+      "password": true
+    }
+  ],
+  "servers": {
+    "mariana": {
+      "type": "http",
+      "url": "https://mariana.santanabigdata.com.br/mcp",
+      "headers": {
+        "Authorization": "Bearer ${input:mariana-token}"
+      }
+    }
+  }
+}

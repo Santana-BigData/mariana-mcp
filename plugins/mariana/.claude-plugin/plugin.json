@@ -1,0 +1,29 @@
+{
+  "name": "mariana",
+  "version": "0.1.0",
+  "description": "Query the Mariana graph database from Claude Code: read-only MCP server (schema, Cypher, neighbors) and a skill that teaches good queries.",
+  "author": {
+    "name": "Santana Big Data",
+    "url": "https://mariana.santanabigdata.com.br"
+  },
+  "homepage": "https://mariana.santanabigdata.com.br",
+  "license": "MIT",
+  "keywords": ["mcp", "graph", "database", "cypher", "mariana"],
+  "userConfig": {
+    "mariana_token": {
+      "type": "string",
+      "title": "Mariana API token",
+      "description": "Create one at https://mariana.santanabigdata.com.br/tokens (starts with mrnk_). It never expires until you revoke it.",
+      "sensitive": true
+    }
+  },
+  "mcpServers": {
+    "mariana": {
+      "type": "http",
+      "url": "https://mariana.santanabigdata.com.br/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.mariana_token}"
+      }
+    }
+  }
+}
